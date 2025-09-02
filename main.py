@@ -3,13 +3,7 @@ from methods.withdraw import Wd
 from methods.transfer import Tsf
 
 class Bank(Dep, Wd, Tsf):
-
-  def __init__(self):
-    super().__init__()
-    self.user_name = input("Enter your name : ")
-    self.user_password = int(input("Enter your password : "))
-
-
+  
   users = [
        {
           'name' : 'saja',
@@ -30,6 +24,13 @@ class Bank(Dep, Wd, Tsf):
     print('3. Transfer money')
     print('4. Show balance')
     print("5. Quit")
+
+
+  def __init__(self):
+    super().__init__()
+    self.user_name = input("Enter your name : ")
+    self.user_password = int(input("Enter your password : "))
+
 
   def login(self):
     for user in Bank.users:
